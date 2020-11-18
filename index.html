@@ -1,0 +1,147 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+	<title>COVID-19</title>
+	<style>
+		.btlist1 { margin-left:170px; margin-top:120px; margin-bottom:40px;
+					font-size:1.3em; 
+					width: 400px; height:150px; }
+
+		#btlist2 {display:inline-block; 
+				margin-left:170px; margin-top:2px; padding:15px; 
+				width:360px; height:40px; 
+				border: 3px solid #0F49BE;
+				font-size:1.4em; font-weight:bold; color:#707070; text-align: center; }
+
+		#map { position:absolute;
+				z-index:100;
+				top:60px;
+				left:650px;  }
+
+		#seoul { position:absolute;
+				z-index:200;
+				top: 167px;
+				left: 784px; }
+
+		#busan { position:absolute;
+				z-index:200;
+				top: 459px;
+				left: 963px; }
+
+		#ulsan { position:absolute;
+				z-index:200;
+				top: 415px;
+				left: 981px; }
+
+		#daegu { position:absolute;
+				z-index:200;
+				top: 382px;
+				left: 919px;  }
+
+		#incheon { position:absolute;
+					z-index:200;
+					top: 175px;
+					left: 766px; }	
+
+		#daejeon { position:absolute;
+					z-index:200;
+					top: 322px;
+					left: 816px;}
+
+		#gwangju { position:absolute;
+					z-index:200;
+					top: 455px;
+					left: 738px; }			
+
+		#seoul:hover { left:750px; top:120px;
+						width:10.0em;
+						z-index:300;}
+
+		#busan:hover { left:900px; top:420px;
+						width:11.0em;
+						z-index:300;}
+
+		#ulsan:hover { left:920px; top:350px;
+						width:11.0em;
+						z-index:300; }
+
+		#daegu:hover { left:860px; top:340px;
+						width:11.0em;
+						z-index:300; }
+
+		#incheon:hover { left:730px; top:145px;
+						width:8.0em;
+						z-index:300; }
+
+		#daejeon:hover{left:780px; top:290px;
+						width:8.0em;
+						z-index:300;}
+
+		#gwangju:hover {left:680px; top:410px;
+						width:11.0em;
+						z-index:300;}			
+
+		a {text-decoration:none;}
+
+		table {  font-weight:bold; border-color:#707070; color:#707070; table-layout:fixed;}
+
+		button{background: transparent; border:none;}
+
+		    #menu {position: absolute; width: 50px; right: 20px ;top: 20px}
+
+		    #menu>span {display: block; width: 100%; height: 8px; background: #0F49BE; margin: 4px 0 ; border-radius: 10px; 		transition: all 1.0s;}
+
+		    #menu>.on:nth-child(1) {transform: translateY(15px) rotate(225deg); transition-delay: 0.2s; }
+
+		    #menu>.on:nth-child(2) {opacity: 0; transform: translateX(50px);}
+
+		    #menu>.on:nth-child(3) {transform: translateY(-11px) rotate(-225deg); transition-delay: 0.2s; }
+
+	</style>
+</head>
+
+
+<body>
+	<button type="button" name="button" id="menu">
+
+	  <span></span>
+
+	  <span></span>
+
+	  <span></span>
+
+	</button>
+
+	<table class=btlist1 border="1" frame=void>
+		<tr>
+			<td>총 확진자 수 :</td>
+			<td>금일 발생 : </td>
+		</tr>
+		<tr>
+			<td>격리 중 : </td>
+			<td>사망자 수 : </td>
+		</tr>
+	</table>
+
+	<Br>
+	<Br>
+
+	<a href="news.html"><p id="btlist2"> NEWS </p></a><br>
+	<a href="policy.html"><p id="btlist2"> 정부정책 </p></a>
+
+
+<!-- 지도 -->
+	<img id="seoul" src="서울특별시2.png" width="54">
+	<img id="busan" src="부산광역시2.png" width="67">
+	<img id="ulsan" src="울산광역시2.png" width="70">
+	<img id="daegu" src="대구광역시2.png" width="63">
+	<img id="incheon" src="인천광역시2.png" width="34">
+	<img id="daejeon" src="대전광역시2.png" width="47">
+	<img id="gwangju" src="광주광역시2.png" width="68">
+
+	<img id="map" src="지도.png" width="480">
+
+	
+
+</body>
+</html>
