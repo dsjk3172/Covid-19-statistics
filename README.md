@@ -1,1 +1,1 @@
-# Covid-19-statistics
+# Covid-19 통계 페이지를 만드는 프로젝트입니다
