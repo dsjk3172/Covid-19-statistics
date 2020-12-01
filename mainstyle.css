@@ -1,0 +1,116 @@
+﻿body {background-color:#F6F6F6;}
+
+		#map { position:absolute;
+				z-index:100;
+				top:60px;
+				left:700px;  }
+
+		#seoul { position:absolute;
+				z-index:200;
+				top: 167px;
+				left: 834px; }
+
+		#busan { position:absolute;
+				z-index:200;
+				top: 459px;
+				left: 1013px; }
+
+		#ulsan { position:absolute;
+				z-index:200;
+				top: 415px;
+				left: 1031px; }
+
+		#daegu { position:absolute;
+				z-index:200;
+				top: 382px;
+				left: 969px;  }
+
+		#incheon { position:absolute;
+					z-index:200;
+					top: 175px;
+					left: 816px; }	
+
+		#daejeon { position:absolute;
+					z-index:200;
+					top: 322px;
+					left: 866px;}
+
+		#gwangju { position:absolute;
+					z-index:200;
+					top: 455px;
+					left: 788px; }			
+
+		#seoul:hover { left:800px; top:100px;
+						width:11.0em;
+						z-index:300;}
+
+		#busan:hover { left:950px; top:420px;
+						width:11.0em;
+						z-index:300;}
+
+		#ulsan:hover { left:970px; top:350px;
+						width:11.0em;
+						z-index:300; }
+
+		#daegu:hover { left:910px; top:330px;
+						width:11.0em;
+						z-index:300; }
+
+		#incheon:hover { left:780px; top:125px;
+						width:10.0em;
+						z-index:300; }
+
+		#daejeon:hover{left:830px; top:270px;
+						width:10.0em;
+						z-index:300;}
+
+		#gwangju:hover {left:730px; top:400px;
+						width:13.0em;
+						z-index:300;}	
+
+
+
+		a {text-decoration:none;}
+
+		table {  font-weight:bold; /*border-color:#707070;*/ table-layout:fixed;}
+
+		.left_contents { margin-left:200px; color:#707070;}
+
+		#logo {  display: block; margin: 0px auto; width:20.0em;}
+
+		#btlist1 { margin-top:10px; margin-bottom:40px;
+					font-size:1.3em; background-color: white;
+					width: 400px; height:150px; }
+
+		#btlist2 {display:inline-block; 
+				margin-top:2px; padding:15px; 
+				width:360px; height:40px; background-color: #0F49BE;
+				border: 3px solid #0F49BE;
+				font-size:1.4em; font-weight:bold; text-align: center; color:white; }	
+
+		#btlist1_text { margin-top:20px; margin-left:320px; /*font-size:2.0em; font-weight: bold; */width:10.0em;}	
+
+
+
+	input[id="menuicon"] {display:none;}
+	input[id="menuicon"] + label {display:block; margin-top:10px; margin-left:30px; width:50px;height:40px;
+									position:absolute;cursor:pointer;}
+	input[id="menuicon"] + label span {display:block;position:absolute;width:100%;height:5px;
+										border-radius:30px;background:#0F49BE;transition:all .35s;}
+
+	input[id="menuicon"] + label span:nth-child(1) {top:0;}
+	input[id="menuicon"] + label span:nth-child(2) {top:50%;transform:translateY(-50%);}
+	input[id="menuicon"] + label span:nth-child(3) {bottom:0;}
+
+	input[id="menuicon"]:checked + label {z-index:2;}
+	input[id="menuicon"]:checked + label span {background:#fff;}
+	input[id="menuicon"]:checked + label span:nth-child(1) {top:50%;transform:translateY(-50%) rotate(45deg);}
+	input[id="menuicon"]:checked + label span:nth-child(2) {opacity:0;}
+	input[id="menuicon"]:checked + label span:nth-child(3) {bottom:50%;transform:translateY(50%) rotate(-45deg);}
+
+	div[class="sidebar"] {width:200px;height:100%;background:#0F49BE;position:fixed;top:0;left:-300px;z-index:1;
+							transition:all .35s;}
+	input[id="menuicon"]:checked + label + div {left:0;}
+
+	.sidebar  a { display:block; margin-left:20px; margin-top:20px; font-size:1.3em; color:#fff;}
+	#sidebar_margin {margin-top:100px; }

@@ -2,146 +2,61 @@
 <html>
 <head>
 	<title>COVID-19</title>
-	<style>
-		.btlist1 { margin-left:170px; margin-top:120px; margin-bottom:40px;
-					font-size:1.3em; 
-					width: 400px; height:150px; }
-
-		#btlist2 {display:inline-block; 
-				margin-left:170px; margin-top:2px; padding:15px; 
-				width:360px; height:40px; 
-				border: 3px solid #0F49BE;
-				font-size:1.4em; font-weight:bold; color:#707070; text-align: center; }
-
-		#map { position:absolute;
-				z-index:100;
-				top:60px;
-				left:650px;  }
-
-		#seoul { position:absolute;
-				z-index:200;
-				top: 167px;
-				left: 784px; }
-
-		#busan { position:absolute;
-				z-index:200;
-				top: 459px;
-				left: 963px; }
-
-		#ulsan { position:absolute;
-				z-index:200;
-				top: 415px;
-				left: 981px; }
-
-		#daegu { position:absolute;
-				z-index:200;
-				top: 382px;
-				left: 919px;  }
-
-		#incheon { position:absolute;
-					z-index:200;
-					top: 175px;
-					left: 766px; }	
-
-		#daejeon { position:absolute;
-					z-index:200;
-					top: 322px;
-					left: 816px;}
-
-		#gwangju { position:absolute;
-					z-index:200;
-					top: 455px;
-					left: 738px; }			
-
-		#seoul:hover { left:750px; top:120px;
-						width:10.0em;
-						z-index:300;}
-
-		#busan:hover { left:900px; top:420px;
-						width:11.0em;
-						z-index:300;}
-
-		#ulsan:hover { left:920px; top:350px;
-						width:11.0em;
-						z-index:300; }
-
-		#daegu:hover { left:860px; top:340px;
-						width:11.0em;
-						z-index:300; }
-
-		#incheon:hover { left:730px; top:145px;
-						width:8.0em;
-						z-index:300; }
-
-		#daejeon:hover{left:780px; top:290px;
-						width:8.0em;
-						z-index:300;}
-
-		#gwangju:hover {left:680px; top:410px;
-						width:11.0em;
-						z-index:300;}			
-
-		a {text-decoration:none;}
-
-		table {  font-weight:bold; border-color:#707070; color:#707070; table-layout:fixed;}
-
-		button{background: transparent; border:none;}
-
-		    #menu {position: absolute; width: 50px; right: 20px ;top: 20px}
-
-		    #menu>span {display: block; width: 100%; height: 8px; background: #0F49BE; margin: 4px 0 ; border-radius: 10px; 		transition: all 1.0s;}
-
-		    #menu>.on:nth-child(1) {transform: translateY(15px) rotate(225deg); transition-delay: 0.2s; }
-
-		    #menu>.on:nth-child(2) {opacity: 0; transform: translateX(50px);}
-
-		    #menu>.on:nth-child(3) {transform: translateY(-11px) rotate(-225deg); transition-delay: 0.2s; }
-
-	</style>
+	<link type="text/css" rel="stylesheet" href="mainstyle.css">
+	
 </head>
 
-
 <body>
-	<button type="button" name="button" id="menu">
 
-	  <span></span>
 
-	  <span></span>
 
-	  <span></span>
+	<input type="checkbox" id="menuicon">
+	<label for="menuicon">
+		<span></span>
+		<span></span>
+		<span></span>
+	</label>
+	<div class="sidebar">
+		<a href="http://13.124.186.192/" id="sidebar_margin">È¨</a>
+		<a href="./NewsPage/NewsPage.html">NEWS</a>
+		<a href="./NewsPage/ÀÏ¹İÀÎ.html">Á¤ºÎÁ¤Ã¥</a>
+	</div>
 
-	</button>
+	<img id="logo" src="logo.png"/>
 
-	<table class=btlist1 border="1" frame=void>
+	
+	<img class="left_contents" id="btlist1_text" src="¹ß»ıµ¿Çâ.png">
+	<!-- <p class="left_contents" id="btlist1_text" >¹ß»ıµ¿Çâ</p> -->
+	<table class="left_contents" id="btlist1" border="0" frame=void>
 		<tr>
-			<td>ì´ í™•ì§„ì ìˆ˜ :</td>
-			<td>ê¸ˆì¼ ë°œìƒ : </td>
+			<td>ÃÑ È®ÁøÀÚ ¼ö :</td>
+			<td>±İÀÏ ¹ß»ı : </td>
 		</tr>
 		<tr>
-			<td>ê²©ë¦¬ ì¤‘ : </td>
-			<td>ì‚¬ë§ì ìˆ˜ : </td>
+			<td>°İ¸® Áß : </td>
+			<td>»ç¸ÁÀÚ ¼ö : </td>
 		</tr>
 	</table>
 
 	<Br>
 	<Br>
+<!--´º½º, Á¤Ã¥ ¹öÆ°-->
+	<a href="./NewsPage/NewsPage.html"><p class="left_contents" id="btlist2"> NEWS </p></a><br>
+	<a href="./NewsPage/ÀÏ¹İÀÎ.html"><p class="left_contents" id="btlist2"> Á¤ºÎÁ¤Ã¥ </p></a>
 
-	<a href="./NewsPage/NewsPage.html"><p id="btlist2"> NEWS </p></a><br>
-	<a href="policy.html"><p id="btlist2"> ì •ë¶€ì •ì±… </p></a>
+<!-- Áöµµ -->
+	<a href="./City/seoul.html"><img id="seoul" src="¼­¿ïÆ¯º°½Ã2.png" width="54"></a>
+	<a href="./City/busan.html"><img id="busan" src="ºÎ»ê±¤¿ª½Ã2.png" width="67"></a>
+	<a href="./City/ulsan.html"><img id="ulsan" src="¿ï»ê±¤¿ª½Ã2.png" width="70"></a>
+	<a href="./City/daegu.html"><img id="daegu" src="´ë±¸±¤¿ª½Ã2.png" width="63"></a>
+	<a href="./City/incheon.html"><img id="incheon" src="ÀÎÃµ±¤¿ª½Ã2.png" width="34"></a>
+	<a href="./City/daejeon.html"><img id="daejeon" src="´ëÀü±¤¿ª½Ã2.png" width="47"></a>
+	<a href="./City/gwangju.html"><img id="gwangju" src="±¤ÁÖ±¤¿ª½Ã2.png" width="68"></a>
+
+	<img id="map" src="Áöµµ2.png" width="480">
 
 
-<!-- ì§€ë„ -->
-	<a href="./Map/Seoul/second.html"><img id="seoul" src="ì„œìš¸íŠ¹ë³„ì‹œ2.png" width="54"></a>
-	<a href="./Map/Busan/second.html"><img id="busan" src="ë¶€ì‚°ê´‘ì—­ì‹œ2.png" width="67"></a>
-	<a href="./Map/Ulsan/second.html"><img id="ulsan" src="ìš¸ì‚°ê´‘ì—­ì‹œ2.png" width="70"></a>
-	<a href="./Map/Daegu/second.html"><img id="daegu" src="ëŒ€êµ¬ê´‘ì—­ì‹œ2.png" width="63"></a>
-	<a href="./Map/Incheon/second.html"><img id="incheon" src="ì¸ì²œê´‘ì—­ì‹œ2.png" width="34"></a>
-	<a href="./Map/Daejeon/second.html"><img id="daejeon" src="ëŒ€ì „ê´‘ì—­ì‹œ2.png" width="47"></a>
-	<a href="./Map/Gwangju/second.html"><img id="gwangju" src="ê´‘ì£¼ê´‘ì—­ì‹œ2.png" width="68"></a>
-
-	<img id="map" src="ì§€ë„.png" width="480">
-
-	
+	<script src="mainscript.js"></script>
 
 </body>
 </html>
