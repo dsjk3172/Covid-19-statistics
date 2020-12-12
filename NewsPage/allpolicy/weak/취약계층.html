@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>코로나19::정부정책</title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <input type="checkbox" id="menuicon">
+        <label for="menuicon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="sidebar">
+            <a href="http://13.124.186.192/" id="sidebar_margin">홈</a>
+            <a href="../../allnews/newpage/News.html">NEWS</a>
+            <a href="../../allpolicy/policy/일반인.html">정부정책</a>
+        </div>
+        <img id="logo" src="../../logo.png"/>
+        <div class="title"><h1>피해지원정책</h1></div>
+        <div class="submenu">
+            <a class="smenu" href="../policy/일반인.html"><span>일반인(대국민)</span></a>
+            <a class="smenuon" href="../weak/취약계층.html"><span>취약계층</span></a>
+            <a class="smenu" href="../company/소상공인.html"><span>소상공인 및 기업</span></a>
+            <a class="smenu" href="../hospital/의료기관.html"><span>의료기관</span></a>
+            <a class="smenu" href="../local/발생지역.html"><span>발생지역</span></a>
+            <a class="smenu" href="../etc/기타.html"><span>기타</span></a>
+        </div>
+        <div></div>
+        <div class="subtitle"><h2>취약계층</h2></div>
+        <div></div>
+        <div class="board_list_wrap">
+           <ul id ="ul">
+            </ul>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript">	
+		$.ajax({
+					url:'weak.csv',
+					dataType:'text',
+					success: function(data) {
+						 var allRows = data.split(/\r?\n|\r/);
+						 	var ul = '<ul>';
+						  for (var singleRow = 0; singleRow < allRows.length-1; singleRow++) {
+	
+						      if (singleRow != 0) {
+						    	  ul += '<li>' 
+						    	  ul += '<div class="general" id="num';
+						    	  ul += singleRow ;
+						    	  ul += '">';
+						    	  ul += ' <span class=circleimg><img src="circle.png" width="25" height="25"></span>';
+								  var rowCells = allRows[singleRow].split(',');
+								  for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
+								 
+						    	  if(rowCell ===1){
+						    		  ul += '<span class=generalname>';
+						    		  ul +=rowCells[rowCell];
+						    		  ul += '</span>' ;
+						    	  }
+						    	  else if(rowCell ===2){
+						    		  ul += '<span class=generaldate>';
+						    		  ul +=rowCells[rowCell];
+						    		  ul += '</span>' ;
+						    		  ul += '<span class=moreimg><img src="down.png" width="20" height="20"></span>'
+						    	  }
+						     	 else if(rowCell ===3){
+						    		  ul += ' <div class="generalcontent" id="contentnum';
+						    		  ul += singleRow ;
+						    		  ul += '"style="display:none;">' ;
+						    		  ul += '<iframe src="';
+						    		  ul += rowCells[rowCell];
+						    		  ul += '" width="1100px" height="1100px">'
+						    		  ul += '</iframe></div>';
+						    	  }
+						     	 
+						    }}
+						    if (singleRow != 0) {
+						      ul += '</div>';
+						      ul += '</li>';
+						    }
+						  } 
+						  ul += '</ul>';
+						  $('#ul').append(ul);
+						  
+						  
+					}
+				});
+		 $(function(){
+	        	$('#num1').click(function(){
+	        		if($("#contentnum1").css("display")=="none"){
+	        			$('#contentnum1').show();}
+	        		else if($("#contentnum1").css("display")!="none"){
+	        			$('#contentnum1').hide();
+	        		}});
+	        	$('#num2').click(function(){
+	        		if($("#contentnum2").css("display")=="none"){
+	        			$('#contentnum2').show();}
+	        		else if($("#contentnum2").css("display")!="none"){
+	        			$('#contentnum2').hide();
+	        		}});
+	        	$('#num3').click(function(){
+	        		if($("#contentnum3").css("display")=="none"){
+	        			$('#contentnum3').show();}
+	        		else if($("#contentnum3").css("display")!="none"){
+	        			$('#contentnum3').hide();
+	        		}});
+	        	$('#num4').click(function(){
+	        		if($("#contentnum4").css("display")=="none"){
+	        			$('#contentnum4').show();}
+	        		else if($("#contentnum4").css("display")!="none"){
+	        			$('#contentnum4').hide();
+	        		}});
+	        	$('#num5').click(function(){
+	        		if($("#contentnum5").css("display")=="none"){
+	        			$('#contentnum5').show();}
+	        		else if($("#contentnum5").css("display")!="none"){
+	        			$('#contentnum5').hide();
+	        		}});
+	        	$('#num6').click(function(){
+	        		if($("#contentnum6").css("display")=="none"){
+	        			$('#contentnum6').show();}
+	        		else if($("#contentnum6").css("display")!="none"){
+	        			$('#contentnum6').hide();
+	        		}});
+	        	$('#num7').click(function(){
+	        		if($("#contentnum7").css("display")=="none"){
+	        			$('#contentnum7').show();}
+	        		else if($("#contentnum7").css("display")!="none"){
+	        			$('#contentnum7').hide();
+	        		}});
+	        	$('#num8').click(function(){
+	        		if($("#contentnum8").css("display")=="none"){
+	        			$('#contentnum8').show();}
+	        		else if($("#contentnum8").css("display")!="none"){
+	        			$('#contentnum8').hide();
+	        		}});
+	        	$('#num9').click(function(){
+	        		if($("#contentnum9").css("display")=="none"){
+	        			$('#contentnum9').show();}
+	        		else if($("#contentnum9").css("display")!="none"){
+	        			$('#contentnum9').hide();
+	        		}});
+	        	$('#num10').click(function(){
+	        		if($("#contentnum10").css("display")=="none"){
+	        			$('#contentnum10').show();}
+	        		else if($("#contentnum10").css("display")!="none"){
+	        			$('#contentnum10').hide();
+	        		}
+	        	});
+	        });
+			</script>
+        </div>
+
+    </body>
+</html>
