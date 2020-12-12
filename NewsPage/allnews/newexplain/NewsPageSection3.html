@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>코로나19::관련뉴스</title>
+        <link rel="stylesheet" href="../../style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    </head>
+    <body>
+		<input type="checkbox" id="menuicon">
+        <label for="menuicon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="sidebar">
+            <a href="http://13.124.186.192/" id="sidebar_margin">홈</a>
+            <a href="../../allnews/newpage/News.html">NEWS</a>
+            <a href="../../allpolicy/policy/일반인.html">정부정책</a>
+        </div>
+        <img id="logo" src="../../logo.png"/>
+        <div class="title"><h1>NEWS</h1></div>
+        <div class="submenu">
+            <a class="smenu" href="../newpage/News.html"><span>전체</span></a>
+            <a class="smenu" href="../mainnewspage/NewsPageSection2.html"><span>보도자료</span></a>
+            <a class="smenuon" href="../newexplain/NewsPageSection3.html"><span>보도해명 · 설명</span></a>
+            <a class="smenu" href="../cardnews/NewsPageSection4.html"><span>브리핑 카드뉴스</span></a>
+        </div>
+        <div></div>
+        <div class="board_list_wrap">
+ 			<table class="board_list" id="table">               
+            </table>
+            <script type="text/javascript">	
+				$.ajax({
+				url:'newsex.csv',
+				dataType:'text',
+				success: function(data) {
+					 var allRows = data.split(/\r?\n|\r/);
+					  var table = ' <table class="board_list">';
+					  for (var singleRow = 0; singleRow < 11; singleRow++) {
+					    if (singleRow === 0) {
+					      table += '<thead>';
+					      table += '<tr>';
+					    } else {
+					      table += '<tr>';
+					    }
+					    var rowCells = allRows[singleRow].split(',');
+					    for (var rowCell = 0; rowCell < 5; rowCell++) {
+					 
+					      if (singleRow === 0) {
+					    	  if(rowCell ===0){
+					    		  table +='<th>번호</th>'
+					    	  }
+					    	  else if(rowCell !=1){
+					      	  table += '<th>';
+					    	    table += rowCells[rowCell];
+					    	    table += '</th>';}
+					      }
+					      else if(rowCells[rowCell] != null){
+					      	if(rowCell ===1){
+					        table += '<td><a href="';
+					        table += rowCells[rowCell];
+					        table += '">';
+					      }else if(rowCell===2){
+						        table += rowCells[rowCell];
+						        table += '</a></td>';
+					      }else {
+						        table += '<td>';
+						        table += rowCells[rowCell];
+						        table += '</td>';
+					      }
+					    }}
+					    if (singleRow === 0) {
+					      table += '</tr>';
+					      table += '</thead>';
+					      table += '<tbody>';
+					    } else {
+					      table += '</tr>';
+					    }
+					  } 
+					  table += '</tbody>';
+					  table += '</table>';
+					  $('#table').append(table);
+					  
+				}
+			});
+			</script>
+        </div>
+    </body>
+</html>

@@ -234,3 +234,8 @@ body {
 input[id="menuicon"] {
     display: none;
 }
+#logo {
+    display: block;
+    margin: 0px auto;
+    width: 20.0em;
+}

@@ -3,7 +3,7 @@
 <head>
 	<title>COVID-19</title>
 	<link type="text/css" rel="stylesheet" href="mainstyle.css">
-	
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
 	</label>
 	<div class="sidebar">
 		<a href="http://13.124.186.192/" id="sidebar_margin">홈</a>
-		<a href="./NewsPage/NewsPage.html">NEWS</a>
+		<a href="./NewsPage/allnews/newpage/News.html">NEWS</a>
 		<a href="./NewsPage/일반인.html">정부정책</a>
 	</div>
 
@@ -26,22 +26,56 @@
 
 	
 	<img class="left_contents" id="btlist1_text" src="발생동향.png">
-	<!-- <p class="left_contents" id="btlist1_text" >발생동향</p> -->
-	<table class="left_contents" id="btlist1" border="0" frame=void>
-		<tr>
-			<td>총 확진자 수 :</td>
-			<td>금일 발생 : </td>
-		</tr>
-		<tr>
-			<td>격리 중 : </td>
-			<td>사망자 수 : </td>
-		</tr>
-	</table>
-
+	<div id="count"></div>
+		<script type="text/javascript">	
+		$.ajax({
+				url:'maindata.csv',
+				dataType:'text',
+				success: function(data) {
+					 var allRows = data.split(/\r?\n|\r/);
+					  var table = ' <table class="left_contents" id="btlist1" border="1"  frame=void style=" margin-top:40px; border-collapse: collapse;text-align:center;font-size:0.9em;font-weight:bold;background-color:#E4E4E4;width:400px">';
+					  for (var singleRow = 0; singleRow < 2; singleRow++) {
+					    if (singleRow === 0) {
+					     // table += '<thead>';
+					      table += '<tr>';
+					    } else {
+					      table += '<tr>';
+					    }
+					    var rowCells = allRows[singleRow].split(',');
+					    for (var rowCell = 0; rowCell < 5; rowCell++) {
+					 
+					      if (singleRow === 0) {
+								if(rowCell !=0){
+					      	 	 table += '<td style ="height:50px;color:black">';
+					    	     table += rowCells[rowCell];
+					    	     table += '</td>';}
+					      }
+					      else if(rowCells[rowCell] != null){
+					      	if(rowCell !=0){
+					        table += '<td style ="height:80px; font-size:1.5em; color:red;">';
+					        table += rowCells[rowCell];
+					        table += '</td>';
+					      }
+					      }		}
+					    if (singleRow === 0) {
+					      table += '</tr>';
+					     // table += '</thead>';
+					      table += '<tbody>';
+					    } else {
+					      table += '</tr>';
+					    }
+					  } 
+					  table += '</tbody>';
+					  table += '</table>';
+					  $('#count').append(table);
+					  
+				}
+			});
+			</script>
 	<Br>
 	<Br>
 <!--뉴스, 정책 버튼-->
-	<a href="./NewsPage/NewsPage.html"><p class="left_contents" id="btlist2"> NEWS </p></a><br>
+	<a href="./NewsPage/allnews/newpage/News.html"><p class="left_contents" id="btlist2"> NEWS </p></a><br>
 	<a href="./NewsPage/일반인.html"><p class="left_contents" id="btlist2"> 정부정책 </p></a>
 
 <!-- 지도 -->
@@ -53,7 +87,7 @@
 	<a href="./City/daejeon.html"><img id="daejeon" src="대전광역시2.png" width="47"></a>
 	<a href="./City/gwangju.html"><img id="gwangju" src="광주광역시2.png" width="68"></a>
 
-	<img id="map" src="지도2.png" width="480">
+	<img id="map" src="지도.png" width="480">
 
 
 	<script src="mainscript.js"></script>

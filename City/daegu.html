@@ -1,74 +1,85 @@
 <HTML>
-<HEAD>
-    <META NAME="GENERATOR" Content="Microsoft Visual Studio">
-    <link rel="stylesheet" href="½ºÅ¸ÀÏ.css" />
-    <TITLE>
-        ´ë±¸ ±¤¿ª½Ã
-    </TITLE>
 
-</HEAD>
-
-<BODY>
-    <input type="checkbox" id="menuicon">
-    <label for="menuicon">
-        <span></span>
-        <span></span>
-        <span></span>
-    </label>
-    <div class="sidebar">
-        <a href="http://13.124.186.192/" id="sidebar_margin">È¨</a>
-       	<a href="../NewsPage/NewsPage.html">NEWS</a>
-       	<a href="../NewsPage/ÀÏ¹İÀÎ.html">Á¤ºÎÁ¤Ã¥</a>
-    </div>
-
-    <header>
-        <h1>
-            ´ë±¸ ±¤¿ª½Ã
-        </h1>
-    </header>
-
-    <main>
-        <div id="left"></div>
-        <div id="right"></div>
-        <div class="head_bottom">
-            <img class="imgbox" src="¸¶½ºÅ©.png" align="left" />
-            <img class="imgbox" src="¸¶½ºÅ©2.png" align="right" />
-
+    <HEAD>
+        <meta charset="UTF-8">
+        <META NAME="GENERATOR" Content="Microsoft Visual Studio">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="ìŠ¤íƒ€ì¼.css" />
+        <TITLE>
+            ëŒ€êµ¬ ê´‘ì—­ì‹œ
+        </TITLE>
+    
+    </HEAD>
+    
+    <BODY>
+        <input type="checkbox" id="menuicon">
+        <label for="menuicon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="sidebar">
+            <a href="http://13.124.186.192/" id="sidebar_margin">í™ˆ</a>
+            <a href="../NewsPage/NewsPage.html">NEWS</a>
+            <a href="../NewsPage/ì¼ë°˜ì¸.html">ì •ë¶€ì •ì±…</a>
         </div>
-        <div id="l_block">
-            <div class="Áöµµ">
-                Áöµµ
+        <img id="logo" src="logo.png" />
+        <header>
+            <h1>
+                ëŒ€êµ¬ ê´‘ì—­ì‹œ
+            </h1>
+        </header>
+    
+        <main>
+            <div id="left"></div>
+            <div id="right"></div>
+            <div class="head_bottom">
+                <img class="imgbox" src="ë§ˆìŠ¤í¬.png" align="left" />
+                <span id='count'>
+                    <script type="text/javascript" src="table.js"></script>
+                    <script>writeTable(3)</script>
+                </span>
+                <img class="imgbox" src="ë§ˆìŠ¤í¬2.png" align="right" />
+    
             </div>
-
-        </div>
-        <div id="r_block">
-
-            <div class="buts">
-                <a class="button" href="#block1">ÃâÀÔ Á¦ÇÑ ¾÷¼Ò</a>
-
-                <a class="button" href="#block2">È®ÁøÀÚ µ¿¼±</a>
-                <a class="button" href="#block3">¼±º° Áø·á¼Ò</a>
+            <div id="l_block">
+                <div id="map" style="width:300px; height:300px"></div>
             </div>
-
-        </div>
-        <div id="block1">
-            <h2>ÃâÀÔ Á¦ÇÑ ¾÷¼Ò</h2>
-            <div class="block"> </div>
-        </div>
-        <div id="block2">
-            <h2>È®ÁøÀÚ µ¿¼±</h2>
-            <div class="block"> </div>
-        </div>
-        <div id="block3">
-            <h2>¼±º° Áø·á¼Ò</h2>
-            <div class="block"> </div>
-
-
-        </div>
-
-    </main>
-
-
-
-</BODY>
-</HTML>
+            <div id="r_block">
+    
+                <div class="buts">
+                    <a class="button" href="#block1">ì¶œì… ì œí•œ ì—…ì†Œ</a>
+                    <a class="button" href="#block2">í™•ì§„ì ë™ì„ </a>
+                    <a class="button" href="#block3">ì„ ë³„ ì§„ë£Œì†Œ</a>
+                </div>
+    
+            </div>
+            <div id="block1">
+                <h2>ì¶œì… ì œí•œ ì—…ì†Œ</h2>
+                <div class="block"> </div>
+            </div>
+            <div id="block2">
+                <h2>í™•ì§„ì ë™ì„ </h2>
+                <div class="block"> </div>
+            </div>
+            <div id="block3">
+                <h2>ì„ ë³„ ì§„ë£Œì†Œ</h2>
+                <div class="block"> </div>
+            </div>
+        </main>
+    
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e1f9277cae2be97391bbd679d49644f8">
+        </script>
+        <script type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e1f9277cae2be97391bbd679d49644f8&libraries=drawing"></script>
+        <script type="text/javascript">
+            var container = document.getElementById('map');
+            var options = {
+                center: new kakao.maps.LatLng(35.871401917891774, 128.6017470621427),
+                level: 3
+            };
+            var map = new kakao.maps.Map(container, options);
+        </script>
+    </BODY>
+    
+    </HTML>

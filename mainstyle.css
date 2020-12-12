@@ -72,15 +72,11 @@
 
 		a {text-decoration:none;}
 
-		table {  font-weight:bold; /*border-color:#707070;*/ table-layout:fixed;}
+		table {font-weight:bold;table-layout:fixed;}
 
 		.left_contents { margin-left:200px; color:#707070;}
 
 		#logo {  display: block; margin: 0px auto; width:20.0em;}
-
-		#btlist1 { margin-top:10px; margin-bottom:40px;
-					font-size:1.3em; background-color: white;
-					width: 400px; height:150px; }
 
 		#btlist2 {display:inline-block; 
 				margin-top:2px; padding:15px; 
@@ -88,7 +84,9 @@
 				border: 3px solid #0F49BE;
 				font-size:1.4em; font-weight:bold; text-align: center; color:white; }	
 
-		#btlist1_text { margin-top:20px; margin-left:320px; /*font-size:2.0em; font-weight: bold; */width:10.0em;}	
+		#btlist1_text { margin-top:20px; margin-left:320px; width:10.0em;}	
+
+		.count {width:135px;}
 
 
 
