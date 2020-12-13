@@ -78,6 +78,7 @@ input[id="menuicon"]:checked + label + div {
     margin-top: 20px;
     font-size: 1.3em;
     color: #fff;
+    text-decoration:none;
 }
 
 #sidebar_margin {
