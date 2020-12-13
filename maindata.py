@@ -38,6 +38,7 @@ dp = datalist[3]
 de = dtlist[0]
 alltdlist.append([ch, de, ho, dp])
 
+#숫자 리스트 csv 파일로 저장
 data = pd.DataFrame(alltdlist)
 data.index += 1
 data.columns=['총 확진자 수','금일 발생','격리 중','사망자수']

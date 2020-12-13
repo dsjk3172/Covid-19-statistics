@@ -1,9 +1,10 @@
 <HTML>
 
     <HEAD>
-        <meta charset="UTF-8">
         <META NAME="GENERATOR" Content="Microsoft Visual Studio">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript" src="table.js"></script>        
+        <script type="text/javascript" src="writeStep.js"></script>
         <link rel="stylesheet" href="스타일.css" />
         <TITLE>
             대구 광역시
@@ -19,9 +20,9 @@
             <span></span>
         </label>
         <div class="sidebar">
-            <a href="http://13.124.186.192/" id="sidebar_margin">홈</a>
-            <a href="../NewsPage/NewsPage.html">NEWS</a>
-            <a href="../NewsPage/일반인.html">정부정책</a>
+                <a href="http://13.124.186.192/" id="sidebar_margin">홈</a>
+                <a href="../NewsPage/allnews/newpage/News.html">NEWS</a>
+                <a href="../NewsPage/allpolicy/policy/일반인.html">정부정책</a>
         </div>
         <img id="logo" src="logo.png" />
         <header>
@@ -35,36 +36,40 @@
             <div id="right"></div>
             <div class="head_bottom">
                 <img class="imgbox" src="마스크.png" align="left" />
-                <span id='count'>
-                    <script type="text/javascript" src="table.js"></script>
-                    <script>writeTable(3)</script>
-                </span>
+                <div id="step"></div>
+                <script>writeStep(2)</script>
                 <img class="imgbox" src="마스크2.png" align="right" />
     
             </div>
             <div id="l_block">
-                <div id="map" style="width:300px; height:300px"></div>
+                <div id="map"></div>
             </div>
             <div id="r_block">
     
                 <div class="buts">
-                    <a class="button" href="#block1">출입 제한 업소</a>
-                    <a class="button" href="#block2">확진자 동선</a>
+                    <a class="button" href="#block1">확진자 현황</a>
                     <a class="button" href="#block3">선별 진료소</a>
                 </div>
     
             </div>
             <div id="block1">
-                <h2>출입 제한 업소</h2>
-                <div class="block"> </div>
-            </div>
-            <div id="block2">
-                <h2>확진자 동선</h2>
-                <div class="block"> </div>
+                <h2>확진자 현황</h2>
+                <div class="bl1">
+                    <div id='count'>
+                        <script>
+                            writeTable("maindata", loc = 3)
+                        </script>
+                    </div>
+                 </div>
             </div>
             <div id="block3">
                 <h2>선별 진료소</h2>
-                <div class="block"> </div>
+                <div class="bl3">
+                    <span id='clinics'></span>
+                    <script>
+                        writeTable('daegu')
+                    </script>
+                </div>
             </div>
         </main>
     

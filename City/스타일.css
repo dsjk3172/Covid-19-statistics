@@ -86,101 +86,79 @@ input[id="menuicon"]:checked + label + div {
 
 nav {
     height: 10%;
-    background-color : cornflowerblue;
+    background-color: cornflowerblue;
 }
 
 header {
     color: #707070;
     /* background-color: darkgray;*/
-    border: solid 3px #707070;
+    border: solid 4px #707070;
     line-height: 80px;
     text-align: center;
 }
 
 .head_bottom {
     height: 16%;
-   /* background-color: antiquewhite;*/
+    display:flex;
+    margin-top: 10px;
 }
 
 main {
     height: 82%;
 }
 
-#left{
-    width : 10%;
-    height:300%;
-    float:left;
+#left {
+    width: 10%;
+    height: 300%;
+    float: left;
 }
-#right{
-    width : 10%;
-    height:300%;
-    float:right;
+
+#right {
+    width: 10%;
+    height: 300%;
+    float: right;
 }
+
 #l_block {
-    width: 40%;
-    height: 40%;
-    margin-bottom : 40px;
+    width: 50%;
+    margin-bottom: 40px;
     float: left;
 }
 
 #r_block {
-    width: 40%;
+    width: 30%;
     float: right;
     height: 40%;
     margin-top: 20px;
     margin-bottom: 40px;
 }
 
-#block1, #block2, #block3 {
-    height: 70%;
+#block1 {
+    height: 40%;
     width: 80%;
     float: left;
-    color: #707070;
     margin-top: 10px;
     display: block;
-    border-color: #707070;
 }
-#block1 {
-}
-/*
-#block2 {
-    height: 70%;
-    width: 90%;
+ #block3 {
+    width: 80%;
     float: left;
-    color: #707070;
-    position: relative;
-    left: 45px;
-    border-color: #707070;
+    margin-top: 10px;
+    display: block;
 }
 
-#block3 {
-    height: 70%;
-    width: 90%;
-    float: left;
-    color: #707070;
-    position: relative;
-    left: 45px;
-    border-color: #707070;
-}
-*/
-.Áöµµ {
-    border: solid 2px #165195;
-    width: 70%;
-    height: 100%;
+#logo {
     display: block;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    line-height: 123px;
+    margin: 0px auto;
+    width: 20.0em;
 }
 
 .buts {
-    width: 50%;
+    width: 70%;
     height: 95%;
     /*border: solid 2px gray;*/
     display: block;
-    margin-top: 13px;
+    margin-top: 150px;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
@@ -188,14 +166,15 @@ main {
 
 .button {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: bold;
     color: white;
     background-color: #0f49be;
     border-bottom: 5px solid #165195;
     padding: 5px 15px 5px 15px;
     display: block;
     margin: 15px;
-    padding : 15px;
+    padding: 15px;
     cursor: pointer;
     transition: all 0.1s;
     text-shadow: 0px -2px rgba(0,0,0,0.44);
@@ -210,32 +189,81 @@ main {
     width: 100px;
     height: 100px;
     border-radius: 70%;
-    margin-left:100px;
-    margin-right:100px;
-    
+    /* margin-right: 100px; */
 }
 
-.block {
+.bl1 {
     width: 100%;
-    height: 80%;
-    border: solid 2px gray;
+    height: 50%;
+    margin-bottom : 20px;
+}
+.bl3 {
+    width: 100%;
+    margin-bottom : 20px;
 }
 
 h2 {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 h1 {
     margin: 0px;
 }
+
 body {
     background-color: #F6F6F6;
 }
+
 input[id="menuicon"] {
     display: none;
 }
-#logo {
-    display: block;
-    margin: 0px auto;
-    width: 20.0em;
+
+.data_list {
+    width: 100%;
+    margin:0px;
+    padding:0px;
+    text-align: center;
 }
+.data_list td {
+    border:0px;
+    width:25%;
+    padding:20px;
+    font-size: larger;
+    font-weight: 900;
+}
+
+#map {
+    border: solid 4px #165195;
+    width: 100%;
+    height: 500px;
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 50px;
+    z-index:0;
+}
+
+#distance {
+    border: 2px solid white;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-weight:bolder;
+    background-color: mediumaquamarine;
+    border-collapse : collapse;
+    table-layout:fixed;
+}
+    #distance td {
+        font-size: 1.1em;
+        border: 3px solid white;
+        font-weight: bold;
+        color: aliceblue;
+    }
+    caption {
+        font-size:2em;
+        font-weight:bolder;
+        margin-bottom: 10px;
+    }

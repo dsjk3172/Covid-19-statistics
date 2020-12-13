@@ -1,79 +1,104 @@
 <HTML>
-<HEAD>
-    <META NAME="GENERATOR" Content="Microsoft Visual Studio">
-    <link rel="stylesheet" href="Ω∫≈∏¿œ.css" />
-    <TITLE>
-        ∫ŒªÍ ±§ø™Ω√
-    </TITLE>
-
-</HEAD>
-
-<BODY>
-    <div>
-        <input type="checkbox" id="menuicon">
-        <label for="menuicon">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        <div class="sidebar">
-            <a href="http://13.124.186.192/" id="sidebar_margin">»®</a>
-		        <a href="../NewsPage/allnews/newpage/News.html">NEWS</a>
-		        <a href="../NewsPage/¿œπ›¿Œ.html">¡§∫Œ¡§√•</a>
+    <HEAD>
+        <META charset="UTF-8"  NAME="GENERATOR" Content="Microsoft Visual Studio">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript" src="table.js"></script>
+        <script type="text/javascript" src="writeStep.js"></script>
+        <link rel="stylesheet" href="Ïä§ÌÉÄÏùº.css" />
+        <TITLE>
+            Î∂ÄÏÇ∞ Í¥ëÏó≠Ïãú
+        </TITLE>
+    
+    </HEAD>
+    
+    <BODY>
+        <div>
+            <input type="checkbox" id="menuicon">
+            <label for="menuicon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div class="sidebar">
+                <a href="http://13.124.186.192/" id="sidebar_margin">Ìôà</a>
+                <a href="../NewsPage/allnews/newpage/News.html">NEWS</a>
+                <a href="../NewsPage/allpolicy/policy/ÏùºÎ∞òÏù∏.html">Ï†ïÎ∂ÄÏ†ïÏ±Ö</a>
+            </div>
+            <img id="logo" src="logo.png" />
         </div>
-        <img id="logo" src="logo.png" />
-    </div>
-
-
-
-    <header>
-        <h1>
-            ∫ŒªÍ ±§ø™Ω√
-        </h1>
-    </header>
-
-    <main>
-        <div id="left"></div>
-        <div id="right"></div>
-        <div class="head_bottom">
-            <img class="imgbox" src="∏∂Ω∫≈©.png" align="left" />
-            <img class="imgbox" src="∏∂Ω∫≈©2.png" align="right" />
-
-        </div>
-        <div id="l_block">
-            <div class="¡ˆµµ">
-                ¡ˆµµ
+    
+    
+    
+        <header>
+            <h1>
+                Î∂ÄÏÇ∞ Í¥ëÏó≠Ïãú
+            </h1>
+        </header>
+    
+        <main>
+            <div id="left"></div>
+            <div id="right"></div>
+            <div class="head_bottom">
+                <img class="imgbox" src="ÎßàÏä§ÌÅ¨.png" align="left" />
+                <div id="step"></div>
+                <script>writeStep(2)</script>
+                <img class="imgbox" src="ÎßàÏä§ÌÅ¨2.png" align="right" />
+    
+            </div>
+            <div id="l_block">
+                <div id="map"></div>
+            </div>
+    
+            </div>
+            <div id="r_block">
+    
+                <div class="buts">
+                    <a class="button" href="#block1">ÌôïÏßÑÏûê ÌòÑÌô©</a>
+                    <a class="button" href="#block3">ÏÑ†Î≥Ñ ÏßÑÎ£åÏÜå</a>
+                </div>
+    
+            </div>
+            <div id="block1">
+                <h2>ÌôïÏßÑÏûê ÌòÑÌô©</h2>
+                <div class="bl1"> 
+                    <div id='count'>
+                        <script>
+                            writeTable("maindata", loc = 2)
+                        </script>
+                    </div>
+                </div>
             </div>
 
-        </div>
-        <div id="r_block">
-
-            <div class="buts">
-                <a class="button" href="#block1">√‚¿‘ ¡¶«— æ˜º“</a>
-
-                <a class="button" href="#block2">»Æ¡¯¿⁄ µøº±</a>
-                <a class="button" href="#block3">º±∫∞ ¡¯∑·º“</a>
+            <div id="block3">
+                <h2>ÏÑ†Î≥Ñ ÏßÑÎ£åÏÜå</h2>
+                <div class="bl3">
+                    <span id='clinics'></span>
+                    <script>
+                        writeTable('busan')
+                    </script>
+                </div>
             </div>
+        </main>
+    
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e1f9277cae2be97391bbd679d49644f8">
+        </script>
+        <script type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e1f9277cae2be97391bbd679d49644f8&libraries=drawing"></script>
+        <script type="text/javascript">
+            var container = document.getElementById('map');
+            var options = {
+                center: new kakao.maps.LatLng(35.17988473325688, 129.0749773550441),
+                level: 3
+            };
+            var map = new kakao.maps.Map(container, options);
+            var markerPosition = new kakao.maps.LatLng(35.17988473325688, 129.0749773550441);
 
-        </div>
-        <div id="block1">
-            <h2>√‚¿‘ ¡¶«— æ˜º“</h2>
-            <div class="block"> </div>
-        </div>
-        <div id="block2">
-            <h2>»Æ¡¯¿⁄ µøº±</h2>
-            <div class="block"> </div>
-        </div>
-        <div id="block3">
-            <h2>º±∫∞ ¡¯∑·º“</h2>
-            <div class="block"> </div>
+            var marker = new kakao.maps.Marker({
+                position: markerPosition
+            });
 
-
-        </div>
-
-    </main>
-
-
-
-</BODY>
-</HTML>
+            marker.setMap(map)
+        </script>
+    </BODY>
+    
+    </HTML>
