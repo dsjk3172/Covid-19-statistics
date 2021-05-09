@@ -4,6 +4,8 @@ Covid-19에 관련된 웹사이트들은 많지만 그렇기에 반대로 필요
 
 그렇기에 정보들을 한 곳에 모아 정리하여 이용자의 수고를 덜어주고, 편의를 도모하고자 웹사이트를 만들고자 하였습니다.
 
+![image](https://user-images.githubusercontent.com/49221672/117558502-fd97ff00-b0b8-11eb-878b-6eca8f57a850.png)
+
 
 # 프로젝트 구현 환경
 - server : Nginx, AWS
