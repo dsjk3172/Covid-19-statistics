@@ -5,8 +5,8 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  schedule:
-    - cron: '5 * * * *'
+ # schedule:
+  #  - cron: '5 * * * *'
 
 jobs:
   build:
@@ -27,10 +27,10 @@ jobs:
                 
     - name: Run main.py
       run: |
-        python maindata.py
+        #python maindata.py
         python ./city/get.py
-        python NewsPage/allnews/cardnews/cardnews.py
-        python NewsPage/allnews/mainnewspage/news.py
-        python NewsPage/allnews/newsexplain/newsexplain.py
-        python NewsPage/allnews/newpage/allnews.py
-        python NewsPage/allpolicy/company/company.py
+        python ./NewsPage/allnews/cardnews/cardnews.py
+        python ./NewsPage/allnews/mainnewspage/news.py
+        python ./NewsPage/allnews/newsexplain/newsexplain.py
+        python ./NewsPage/allnews/newpage/allnews.py
+        python ./NewsPage/allpolicy/company/company.py
