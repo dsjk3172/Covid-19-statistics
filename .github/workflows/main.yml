@@ -17,3 +17,15 @@ jobs:
     - name: Run main.py
       run: |
         python maindata.py
+        python ./city/get.py
+        python NewsPage/allnews/cardnews/cardnews.py
+        python NewsPage/allnews/mainnewspage/news.py
+        python NewsPage/allnews/newsexplain/newsexplain.py
+        python NewsPage/allnews/newpage/allnews.py
+        
+        python NewsPage/allpolicy/company/company.py
+        python NewsPage/allpolicy/etc/etc.py
+        python NewsPage/allpolicy/hospital/hospital.py
+        python NewsPage/allpolicy/local/local.py
+        python NewsPage/allpolicy/policy/policy.py
+        python NewsPage/allpolicy/weak/weak.py
