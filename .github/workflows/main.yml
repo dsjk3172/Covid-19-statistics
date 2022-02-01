@@ -1,12 +1,8 @@
 name: CI
 
 on:
- # push:
- #   branches: [ main ]
- # pull_request:
- #   branches: [ main ]
- # schedule:
-  #  - cron: '5 * * * *'
+  schedule:
+    - cron: '5 * * * *'
 
 jobs:
   build:
