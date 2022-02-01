@@ -3,8 +3,8 @@ from bs4 import BeautifulSoup
 import pandas as pd
 #메인 페이지 확진자 수
 
-datalist =list()
-dtlist = list()
+datalist1 =list()
+datalist2 =list()
 url=list()
 alltdlist = list()
 namelist=list()
@@ -15,32 +15,25 @@ html = req.text
 soup = BeautifulSoup(html, 'html.parser')
 print("--------------------------")
 
-tabledate =soup.find('ul', {'class': 'liveNum'})
-for tr in tabledate.find_all('li'):
-        td = list(tr.find_all('span', {'class' : 'num'}))
+tabledata = soup.find('div', {'class': 'occurrenceStatus'})
+for tr in tabledata.find_all('div', {'class': 'box'}):
+        td = list(tr)
         for i in td :
                 j = i.text
-                j = j.replace(",", "")
-                j = j.replace("(누적)", "")
-                datalist.append(j)
+                datalist1.append(j)
 
-        data = list(tr.find_all('span', {'class': 'before'}))
-        for w in data:
-            t = w.text
-            t = t.replace("전일대비 (+", "")
-            t = t.replace(")", "")
-            t = t.replace(" ","")
-            dtlist.append(t)
+tabledata = soup.find('div', {'class': 'occur_graph'})
+tr = tabledata.find("tbody")
+tr = tr.find("tr")
+for i in tr.find_all('span'):
+        i = i.text
+        datalist2.append(i)
 
-ch = datalist[0]
-ho = datalist[2]
-dp = datalist[3]
-de = dtlist[0]
-alltdlist.append([ch, de, ho, dp])
+alltdlist.append([datalist1[3], datalist2[4], datalist2[3], datalist1[1]])
 
 #숫자 리스트 csv 파일로 저장
 data = pd.DataFrame(alltdlist)
 data.index += 1
-data.columns=['총 확진자 수','금일 발생','격리 중','사망자수']
+data.columns=['누적 확진','일일 확진자','신규 입원','누적 사망']
 data.to_csv('maindata.csv', encoding= 'UTF-8')
 print("Complete!")
