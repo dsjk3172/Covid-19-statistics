@@ -20,6 +20,7 @@ for tr in tabledata.find_all('div', {'class': 'box'}):
         td = list(tr)
         for i in td :
                 j = i.text
+                j = j.replace(",", "")
                 datalist1.append(j)
 
 tabledata = soup.find('div', {'class': 'occur_graph'})
@@ -27,6 +28,7 @@ tr = tabledata.find("tbody")
 tr = tr.find("tr")
 for i in tr.find_all('span'):
         i = i.text
+        i = i.replace(",", "")
         datalist2.append(i)
 
 alltdlist.append([datalist1[3], datalist2[4], datalist2[3], datalist1[1]])

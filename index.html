@@ -33,7 +33,7 @@
 				dataType:'text',
 				success: function(data) {
 					 var allRows = data.split(/\r?\n|\r/);
-					  var table = ' <table class="left_contents" id="btlist1" border="1"  frame=void style=" margin-top:40px; border-collapse: collapse;text-align:center;font-size:0.9em;font-weight:bold;background-color:#E4E4E4;width:800px;">';
+					  var table = ' <table class="left_contents" id="btlist1" border="1"  frame=void style=" margin-top:40px; border-collapse: collapse;text-align:center;font-size:0.9em;font-weight:bold;background-color:#E4E4E4;width:400px;">';
 					  for (var singleRow = 0; singleRow < 2; singleRow++) {
 					    if (singleRow === 0) {
 					     // table += '<thead>';
@@ -87,7 +87,7 @@
 	<a href="./City/daejeon.html"><img id="daejeon" src="대전광역시2.png" width="47"></a>
 	<a href="./City/gwangju.html"><img id="gwangju" src="광주광역시2.png" width="68"></a>
 
-	<!-- <img id="map" src="지도.png" width="480"> -->
+	<img id="map" src="지도.png" width="480">
 
 
 	<script src="mainscript.js"></script>
