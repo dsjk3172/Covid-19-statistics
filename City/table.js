@@ -10,9 +10,9 @@ function writeTable(col, loc = 0) {
                 var table ='<table class="data_list"><tr style="color:white;">';
 
                 var rowCells = allRows[loc].split(',');
-                var names = ['누적 확진', '신규 확진', '치료중', '사망']
+                var names = ['확진 누적', '신규 확진', '격리 해제 누적', '사망 누적']
 
-                for(var i = 0; i < rowCells.length; i++) //누적 확진, 신규 확진, 치료중, 사망
+                for (var i = 0; i < rowCells.length; i++) //확진 누적, 신규 확진, 격리 해제 누적, 사망 누적
                     table += `<td style="background-color: ${color_list[i]}";>${names[i]}</td>`;
 
                 table += '</tr><tr style="font-size:x-large">';
