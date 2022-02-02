@@ -30,7 +30,7 @@ jobs:
         python ./NewsPage/allnews/newexplain/newsexplain.py
         python ./NewsPage/allnews/newpage/allnews.py
         python ./NewsPage/allpolicy/company/company.py
-        python ./NewsPage/allpolicy/etc/etc.py
+        #python ./NewsPage/allpolicy/etc/etc.py
         python ./NewsPage/allpolicy/hospital/hospital.py
         python ./NewsPage/allpolicy/local/local.py
         python ./NewsPage/allpolicy/policy/policy.py
