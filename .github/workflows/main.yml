@@ -23,12 +23,12 @@ jobs:
                 
     - name: Run main.py
       run: |
-        python maindata.py
-        python ./City/get.py
-        python ./NewsPage/allnews/cardnews/cardnews.py
-        python ./NewsPage/allnews/mainnewspage/news.py
-        python ./NewsPage/allnews/newexplain/newsexplain.py
-        python ./NewsPage/allnews/newpage/allnews.py
+        #python maindata.py
+        #python ./City/get.py
+        #python ./NewsPage/allnews/cardnews/cardnews.py
+        #python ./NewsPage/allnews/mainnewspage/news.py
+        #python ./NewsPage/allnews/newexplain/newsexplain.py
+        #python ./NewsPage/allnews/newpage/allnews.py
         #python ./NewsPage/allpolicy/company/company.py
         #python ./NewsPage/allpolicy/etc/etc.py
         #python ./NewsPage/allpolicy/hospital/hospital.py
